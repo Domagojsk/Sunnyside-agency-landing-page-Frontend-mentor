@@ -1,0 +1,19 @@
+.btn {
+  display: inline-block;
+  font-weight: 900;
+  text-transform: uppercase;
+  background-color: $white;
+  padding: 0.9rem 1.5rem;
+  border-radius: 25px;
+  color: $very-dark-desaturated-blue;
+  font-family: $Fraunces-font;
+  font-size: 1rem;
+  margin-right: 0.4rem;
+  outline: none;
+  border: none;
+
+  &:hover {
+    color: $white;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}

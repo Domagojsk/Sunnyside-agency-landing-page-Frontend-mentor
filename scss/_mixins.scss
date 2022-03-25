@@ -1,0 +1,29 @@
+// ---- Direction ----
+@mixin flex-direction($direction) {
+  @if $direction == column {
+    -webkit-flex-direction: vertical;
+    -moz-flex-direction: vertical;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  } @else {
+    -webkit-flex-direction: horizontal;
+    -moz-flex-direction: horizontal;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+// ---- flex justify align direction----
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+// ---- font size ----
+@mixin font-size {
+  font-size: 18px;
+}

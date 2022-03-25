@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+img {
+  display: block;
+}
+
+.logo {
+  width: 9.5rem;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  background-image: url(/images/desktop/image-header.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  height: 45rem;
+  max-height: 100%;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  max-width: 100%;
+  padding: 2rem 2.5rem;
+  position: relative;
+}
+
+header .menu-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+}
+
+header .menu-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 2.6rem;
+  margin-right: 2.8rem;
+}
+
+header .menu-links a {
+  color: white;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  letter-spacing: 0.6rem;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+  padding: 4rem;
+}
+
+header .arrow-down {
+  margin: 0 auto;
+  margin-top: 1rem;
+  height: 15%;
+  width: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 900;
+  text-transform: uppercase;
+  background-color: white;
+  padding: 0.9rem 1.5rem;
+  border-radius: 25px;
+  color: #23303e;
+  font-family: "Fraunces", serif;
+  font-size: 1rem;
+  margin-right: 0.4rem;
+  outline: none;
+  border: none;
+}
+
+.btn:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/*  transform section */
+.transform-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  height: 33rem;
+  min-height: 50%;
+  background-color: white;
+}
+
+.transform-container img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  min-width: 50vw;
+}
+
+.transform-container section {
+  min-width: 50vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  padding: 8.7rem 9rem;
+}
+
+.transform-container h2 {
+  font-family: "Fraunces", serif;
+  color: #23303e;
+  font-weight: 900;
+  font-size: 2.4rem;
+  word-spacing: -1px;
+  letter-spacing: -2px;
+}
+
+.transform-container p {
+  font-family: "Barlow", sans-serif;
+  color: #818498;
+  padding-top: 1.5rem;
+  line-height: 30px;
+}
+
+.transform-container a {
+  position: relative;
+  font-family: "Fraunces", serif;
+  color: #23303e;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 0.9rem;
+  margin: 0.6rem;
+}
+/*# sourceMappingURL=main.css.map */
