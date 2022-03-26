@@ -19,7 +19,8 @@ img {
   max-width: 100%;
 }
 
-a {
+a,
+btn-learn {
   text-decoration: none;
   cursor: pointer;
 }
@@ -93,6 +94,10 @@ header .menu-links a {
   color: white;
 }
 
+header .menu-links a:hover {
+  color: #19536b;
+}
+
 header h1 {
   font-size: 3rem;
   font-family: "Fraunces", serif;
@@ -156,16 +161,15 @@ body {
   background-color: white;
 }
 
-.transform-container img {
-  background-position: center;
+.transform-container .transform-audience {
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
-  min-width: 50vw;
+  min-width: 50%;
 }
 
-.transform-container section {
-  min-width: 50vw;
+.transform-container .transform-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -175,6 +179,7 @@ body {
           flex-direction: column;
   text-align: left;
   padding: 8.7rem 9rem;
+  height: 100%;
 }
 
 .transform-container h2 {
@@ -193,7 +198,7 @@ body {
   line-height: 30px;
 }
 
-.transform-container a {
+.transform-container .btn-learn {
   position: relative;
   font-family: "Fraunces", serif;
   color: #23303e;
@@ -201,5 +206,148 @@ body {
   font-weight: 900;
   font-size: 0.9rem;
   margin: 0.6rem;
+  z-index: 1;
+}
+
+.transform-container .btn-learn::before {
+  position: absolute;
+  background-color: #fad400;
+  opacity: 0;
+  left: -6px;
+  top: 12px;
+  content: '';
+  width: 7rem;
+  height: 8px;
+  border-radius: 15px;
+  z-index: -1;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.transform-container .btn-learn:hover.btn-learn::before {
+  opacity: 1;
+}
+
+.audience-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 33rem;
+  min-height: 50%;
+  background-color: white;
+}
+
+.audience-container .transform-audience {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  min-width: 50%;
+}
+
+.audience-container .transform-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  padding: 8.7rem 9rem;
+  height: 100%;
+}
+
+.audience-container .btn-learn:hover.btn-learn::before {
+  opacity: 1;
+  background-color: #fe7867;
+}
+
+/* Gaphich Design - Photography section */
+.graphic-photography {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 33rem;
+  width: 100%;
+}
+
+.graphic-photography .graphic-container,
+.graphic-photography .photography-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.graphic-photography .graphic-img,
+.graphic-photography .photography-img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+  resize: both;
+}
+
+.graphic-photography .graphic-text,
+.graphic-photography .photography-text {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 60%;
+  text-align: center;
+  gap: 1.8rem;
+}
+
+.graphic-photography .photography-text {
+  left: 5%;
+}
+
+.graphic-photography .photography-text h2,
+.graphic-photography .photography-text p {
+  color: #19536b;
+}
+
+.graphic-photography h2 {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  color: #25564b;
+}
+
+.graphic-photography p {
+  color: #25564b;
+  width: 50%;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: "Fraunces", serif;
+  line-height: 1.4rem;
+}
+
+.testimonials-container {
+  color: white;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */

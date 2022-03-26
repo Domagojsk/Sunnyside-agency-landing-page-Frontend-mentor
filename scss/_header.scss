@@ -30,6 +30,10 @@ header {
 
   .menu-links a {
     color: $white;
+
+    &:hover {
+      color: $dark-blue-photography-text;
+    }
   }
 
   h1 {

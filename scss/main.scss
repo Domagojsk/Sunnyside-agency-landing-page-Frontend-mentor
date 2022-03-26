@@ -19,19 +19,19 @@ body {
   min-height: 50%;
   background-color: $white;
 
-  img {
-    background-position: center;
+  .transform-audience {
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-    min-width: 50vw;
+    min-width: 50%;
   }
-  section {
-    min-width: 50vw;
+  .transform-container {
     display: flex;
     flex-direction: column;
     text-align: left;
     padding: 8.7rem 9rem;
+    height: 100%;
   }
 
   h2 {
@@ -50,7 +50,7 @@ body {
     line-height: 30px;
   }
 
-  a {
+  .btn-learn {
     position: relative;
     font-family: $Fraunces-font;
     color: $very-dark-desaturated-blue;
@@ -58,5 +58,121 @@ body {
     font-weight: 900;
     font-size: 0.9rem;
     margin: 0.6rem;
+    z-index: 1;
   }
+
+  .btn-learn::before {
+    position: absolute;
+    background-color: $yellow;
+    opacity: 0;
+    left: -6px;
+    top: 12px;
+    content: '';
+    width: 7rem;
+    height: 8px;
+    border-radius: 15px;
+    z-index: -1;
+    transition: all 0.2s ease-in-out;
+  }
+  .btn-learn:hover.btn-learn::before {
+    opacity: 1;
+  }
+}
+
+// Standings to the right audience container
+.audience-container {
+  display: flex;
+  flex-direction: row;
+  height: 33rem;
+  min-height: 50%;
+  background-color: $white;
+
+  .transform-audience {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    min-width: 50%;
+  }
+
+  .transform-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 8.7rem 9rem;
+    height: 100%;
+  }
+
+  .btn-learn:hover.btn-learn::before {
+    opacity: 1;
+    background-color: $soft-red;
+  }
+}
+
+/* Gaphich Design - Photography section */
+.graphic-photography {
+  display: flex;
+  flex-direction: row;
+  height: 33rem;
+  width: 100%;
+
+  .graphic-container,
+  .photography-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  .graphic-img,
+  .photography-img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    resize: both;
+  }
+
+  .graphic-text,
+  .photography-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 60%;
+    text-align: center;
+    gap: 1.8rem;
+  }
+
+  .photography-text {
+    left: 5%;
+  }
+
+  .photography-text h2,
+  .photography-text p {
+    color: $dark-blue-photography-text;
+  }
+
+  h2 {
+    font-family: $Fraunces-font;
+    font-weight: 900;
+    color: $dark-desaturated-cyan-graphic-design-text;
+  }
+  p {
+    color: $dark-desaturated-cyan-graphic-design-text;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: $Fraunces-font;
+    line-height: 1.4rem;
+  }
+}
+
+// Clients testimonials
+.testimonials-container {
+  color: $white;
+  text-align: center;
 }
