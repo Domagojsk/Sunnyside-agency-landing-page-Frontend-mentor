@@ -27,3 +27,22 @@
 @mixin font-size {
   font-size: 18px;
 }
+
+/*---- Media queries---- */
+@mixin respond($breakpoint) {
+  @if ($breakpoint == large) {
+    @media (max-width: 1110px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == medium) {
+    @media (max-width: 780px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == small) {
+    @media (max-width: 380px) {
+      @content;
+    }
+  }
+}

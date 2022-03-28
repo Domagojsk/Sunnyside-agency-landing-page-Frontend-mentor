@@ -4,6 +4,7 @@
 @import 'colors';
 @import 'header';
 @import 'buttons';
+@import 'footer';
 
 body {
   min-height: 100vh;
@@ -18,6 +19,9 @@ body {
   height: 33rem;
   min-height: 50%;
   background-color: $white;
+  @include respond(small) {
+    flex-direction: column;
+  }
 
   .transform-audience {
     background-position: center center;
@@ -25,13 +29,32 @@ body {
     background-size: cover;
     height: 100%;
     min-width: 50%;
+
+    @include respond(small) {
+      background-image: url(/images/mobile/image-transform.jpg);
+      width: 100%;
+      min-height: 50%;
+    }
   }
-  .transform-container {
+
+  .transform-brand {
     display: flex;
     flex-direction: column;
     text-align: left;
     padding: 8.7rem 9rem;
     height: 100%;
+    @include respond(large) {
+      padding: 7rem 5.5rem;
+    }
+    @include respond(medium) {
+      padding: 5rem 3.5rem;
+    }
+    @include respond(small) {
+      padding: 2rem 1rem;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
   }
 
   h2 {
@@ -39,8 +62,17 @@ body {
     color: $very-dark-desaturated-blue;
     font-weight: 900;
     font-size: 2.4rem;
-    word-spacing: -1px;
-    letter-spacing: -2px;
+
+    @include respond(large) {
+      font-size: 1.6rem;
+    }
+    @include respond(medium) {
+      font-size: 1.3rem;
+    }
+    @include respond(small) {
+      font-size: 1.6rem;
+      word-spacing: 1px;
+    }
   }
 
   p {
@@ -48,6 +80,14 @@ body {
     color: $dark-grayish-blue;
     padding-top: 1.5rem;
     line-height: 30px;
+    font-size: 1rem;
+    @include respond(large) {
+      line-height: 25px;
+    }
+    @include respond(medium) {
+      line-height: 22px;
+      font-size: 0.8rem;
+    }
   }
 
   .btn-learn {
@@ -86,6 +126,9 @@ body {
   height: 33rem;
   min-height: 50%;
   background-color: $white;
+  @include respond(small) {
+    flex-direction: column;
+  }
 
   .transform-audience {
     background-position: center center;
@@ -93,17 +136,93 @@ body {
     background-size: cover;
     height: 100%;
     min-width: 50%;
+    @include respond(small) {
+      background-image: url(/images/mobile/image-stand-out.jpg);
+      width: 100%;
+      min-height: 50%;
+    }
   }
 
-  .transform-container {
+  .transform-text {
     display: flex;
     flex-direction: column;
     text-align: left;
     padding: 8.7rem 9rem;
     height: 100%;
+    @include respond(large) {
+      padding: 7rem 5.5rem;
+    }
+    @include respond(medium) {
+      padding: 5rem 3.5rem;
+    }
+    @include respond(small) {
+      padding: 2rem 1rem;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
   }
 
-  .btn-learn:hover.btn-learn::before {
+  h2 {
+    font-family: $Fraunces-font;
+    color: $very-dark-desaturated-blue;
+    font-weight: 900;
+    font-size: 2.4rem;
+    word-spacing: -1px;
+    letter-spacing: -2px;
+    @include respond(large) {
+      font-size: 1.6rem;
+    }
+    @include respond(medium) {
+      font-size: 1.3rem;
+    }
+    @include respond(small) {
+      font-size: 1.6rem;
+      word-spacing: 1px;
+    }
+  }
+
+  p {
+    font-family: $Barlow-font;
+    color: $dark-grayish-blue;
+    padding-top: 1.5rem;
+    line-height: 30px;
+    font-size: 1rem;
+    @include respond(large) {
+      line-height: 25px;
+    }
+    @include respond(medium) {
+      line-height: 22px;
+      font-size: 0.8rem;
+    }
+  }
+
+  .btn-text {
+    position: relative;
+    font-family: $Fraunces-font;
+    color: $very-dark-desaturated-blue;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 0.9rem;
+    margin: 0.6rem;
+    z-index: 1;
+  }
+
+  .btn-text::before {
+    position: absolute;
+    background-color: $yellow;
+    opacity: 0;
+    left: -6px;
+    top: 12px;
+    content: '';
+    width: 7rem;
+    height: 8px;
+    border-radius: 15px;
+    z-index: -1;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn-text:hover.btn-text::before {
     opacity: 1;
     background-color: $soft-red;
   }
@@ -115,6 +234,11 @@ body {
   flex-direction: row;
   height: 33rem;
   width: 100%;
+  resize: both;
+  @include respond(small) {
+    flex-direction: column;
+    height: 60rem;
+  }
 
   .graphic-container,
   .photography-container {
@@ -130,24 +254,52 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    object-fit: cover;
     height: 100%;
     width: 100%;
-    resize: both;
   }
 
-  .graphic-text,
-  .photography-text {
+  .graphic-img {
+    @include respond(small) {
+      background-image: url(/images/mobile/image-graphic-design.jpg);
+      object-fit: cover;
+    }
+  }
+
+  .photography-img {
+    @include respond(small) {
+      background-image: url(/images/mobile/image-photography.jpg);
+      object-fit: cover;
+    }
+  }
+
+  .graphic-text {
     position: absolute;
     display: flex;
     flex-direction: column;
     top: 60%;
     text-align: center;
     gap: 1.8rem;
+    @include respond(medium) {
+      gap: 1.1rem;
+    }
+    @include respond(small) {
+      top: 65%;
+    }
   }
 
   .photography-text {
-    left: 5%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    top: 60%;
+    gap: 1.8rem;
+    @include respond(medium) {
+      gap: 1.1rem;
+    }
+    @include respond(small) {
+      top: 65%;
+    }
   }
 
   .photography-text h2,
@@ -159,7 +311,15 @@ body {
     font-family: $Fraunces-font;
     font-weight: 900;
     color: $dark-desaturated-cyan-graphic-design-text;
+    font-size: 2rem;
+    @include respond(medium) {
+      font-size: 1.2rem;
+    }
+    @include respond(small) {
+      font-size: 1.6rem;
+    }
   }
+
   p {
     color: $dark-desaturated-cyan-graphic-design-text;
     width: 50%;
@@ -168,11 +328,164 @@ body {
     font-weight: 600;
     font-family: $Fraunces-font;
     line-height: 1.4rem;
+    @include respond(medium) {
+      font-size: 0.7rem;
+    }
+    @include respond(small) {
+      font-size: 0.9rem;
+      width: 80%;
+    }
   }
 }
 
 // Clients testimonials
 .testimonials-container {
+  display: flex;
+  @include flex-direction(column);
   color: $white;
   text-align: center;
+  min-height: 60vh;
+  padding: 8.9rem;
+  @include respond(medium) {
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+  }
+  @include respond(small) {
+    padding: 3rem 2rem;
+  }
+
+  .clinets-container {
+    display: flex;
+    @include flex-direction(row);
+    gap: initial;
+    margin-top: 4.3rem;
+    @include respond(medium) {
+      flex-direction: column;
+      height: 100%;
+      gap: 2rem;
+    }
+  }
+
+  .client {
+    display: flex;
+    @include flex-direction(column);
+    gap: 3.1rem;
+    padding: 0 14px 0 14px;
+    @include respond(medium) {
+      gap: 1rem;
+      padding: 0;
+    }
+  }
+
+  img {
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 50%;
+    height: 4rem;
+  }
+
+  h3 {
+    color: $grayish-blue;
+    font-family: $Fraunces-font;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    @include respond(medium) {
+      font-size: 1rem;
+    }
+    @include respond(small) {
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+    }
+  }
+
+  .client-feedback {
+    color: $dark-grayish-blue;
+    line-height: 1.8;
+    font-family: $Barlow-font;
+    font-weight: 600;
+    @include respond(medium) {
+      line-height: 1.5;
+    }
+  }
+
+  .author-container {
+    @include flex(center, center, column);
+    text-align: center;
+    gap: 0.7rem;
+    padding-top: 0.8rem;
+  }
+
+  .profile {
+    color: $very-dark-desaturated-blue;
+    font-family: $Fraunces-font;
+    font-weight: 900;
+    font-size: 1rem;
+    @include respond(medium) {
+      font-size: 0.7rem;
+    }
+  }
+
+  .job {
+    color: $dark-grayish-blue;
+    line-height: 1;
+    font-size: 0.8rem;
+  }
+}
+
+/* Images section */
+.images-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  @include respond(small) {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  img {
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  .milk-img {
+    @include respond(small) {
+      background-image: url(/images/mobile/image-gallery-milkbottles.jpg);
+    }
+  }
+
+  .orange-img {
+    @include respond(small) {
+      background-image: url(/images/mobile/image-gallery-orange.jpg);
+    }
+  }
+
+  .cone-img {
+    @include respond(small) {
+      background-image: url(/images/mobile/image-gallery-cone.jpg);
+    }
+  }
+
+  .sugarcubes-img {
+    @include respond(small) {
+      background-image: url(/images/mobile/image-gallery-sugar-cubes.jpg);
+    }
+  }
+}
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+  font-family: $Fraunces-font;
+  background-color: #8ed0c4;
+  color: $very-dark-desaturated-blue;
+}
+.attribution a {
+  color: $dark-desaturated-cyan-graphic-design-text;
+
+  &:hover {
+    color: $white;
+  }
 }
