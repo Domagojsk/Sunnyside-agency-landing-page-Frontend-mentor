@@ -15,7 +15,7 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
 
 ### Links
